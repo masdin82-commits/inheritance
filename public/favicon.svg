@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+  <!-- Beautiful Rub el Hizb (Islamic 8-pointed star) shape -->
+  <path d="M16 2l4.3 4.3L26.6 6l-.3 6.1L30 16l-3.7 3.9.3 6.1-6.3-.3L16 30l-4.3-4.3-6.3.3.3-6.1L2 16l3.7-3.9-.3-6.1 6.3.3z" fill="url(#grad)"/>
+  
+  <!-- Minimalist white scales of justice/faraid balance in the center -->
+  <path d="M16 9v12M13 21h6" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M11 12.5h10" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Left pan -->
+  <path d="M11 12.5l-2.5 4.5h5z" fill="#ffffff" opacity="0.95"/>
+  <!-- Right pan -->
+  <path d="M21 12.5l-2.5 4.5h5z" fill="#ffffff" opacity="0.95"/>
+</svg>

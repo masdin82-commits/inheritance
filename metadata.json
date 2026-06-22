@@ -1,0 +1,8 @@
+{
+  "name": "Islamic Inheritance Calculator",
+  "description": "An advanced, highly-optimized Islamic Inheritance Calculator and interactive Faraid dashboard. Model classical Sharia-compliant estate rules, solve Al-Aoul, Al-Radd mathematical limits, analyze survivors, and query the embedded AI Scholar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
