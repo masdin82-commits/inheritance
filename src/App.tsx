@@ -49,23 +49,23 @@ export default function App() {
   // --- 1. State declarations ---
   const [deceasedName, setDeceasedName] = useState<string>("");
   const [gender, setGender] = useState<'male' | 'female'>("male");
-  const [estateValue, setEstateValue] = useState<number | "">(100000);
+  const [estateValue, setEstateValue] = useState<number | "">(0);
   const [currency, setCurrency] = useState<Currency>(CURRENCIES[0]);
   
   // Financial dues
   const [debts, setDebts] = useState<number | "">(0);
-  const [funeralExpenses, setFuneralExpenses] = useState<number | "">(1500);
+  const [funeralExpenses, setFuneralExpenses] = useState<number | "">(0);
   const [bequests, setBequests] = useState<number | "">(0);
 
   // Surviving Family tree
-  const [spouseCount, setSpouseCount] = useState<number>(1); // Wives if deceased is male, Husband if deceased is female
-  const [sonsCount, setSonsCount] = useState<number>(1);
-  const [daughtersCount, setDaughtersCount] = useState<number>(1);
+  const [spouseCount, setSpouseCount] = useState<number>(0); // Wives if deceased is male, Husband if deceased is female
+  const [sonsCount, setSonsCount] = useState<number>(0);
+  const [daughtersCount, setDaughtersCount] = useState<number>(0);
   const [grandsonsCount, setGrandsonsCount] = useState<number>(0);
   const [granddaughtersCount, setGranddaughtersCount] = useState<number>(0);
 
-  const [hasFather, setHasFather] = useState<boolean>(true);
-  const [hasMother, setHasMother] = useState<boolean>(true);
+  const [hasFather, setHasFather] = useState<boolean>(false);
+  const [hasMother, setHasMother] = useState<boolean>(false);
   const [hasPaternalGrandfather, setHasPaternalGrandfather] = useState<boolean>(false);
   const [hasPaternalGrandmother, setHasPaternalGrandmother] = useState<boolean>(false);
   const [hasMaternalGrandmother, setHasMaternalGrandmother] = useState<boolean>(false);
@@ -1117,11 +1117,28 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="mt-20 border-t border-stone-200/60 bg-[#FAF9F5] py-8 text-center text-xs text-slate-400">
-        <div className="max-w-7xl mx-auto px-6 space-y-2">
+        <div className="max-w-7xl mx-auto px-6 space-y-4">
           <p className="font-semibold text-slate-600 uppercase tracking-wider text-[10px]">Islamic Probate Algebra Engine</p>
           <p className="max-w-md mx-auto leading-normal text-stone-400">
             Faraid math is calculated by direct Sunni law of inheritance ratios (Furud). AI analysis is trained on top Sunni classical madhab codes but should be validated by registered legal bodies.
           </p>
+
+          {/* Quick Reference Search Indexes */}
+          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto pt-2">
+            {[
+              "Islamic inheritance calculator with amount",
+              "Islamic inheritance calculator Hanafi",
+              "Islamic inheritance calculator Maliki",
+              "Islamic inheritance calculator Shafi'i",
+              "Islamic inheritance calculator Hambali",
+              "Islamic inheritance calculator app"
+            ].map((kw, i) => (
+              <span key={i} className="text-[10px] text-slate-500 bg-stone-100 hover:bg-stone-200/50 px-3 py-1 rounded-full transition-colors border border-stone-200/40">
+                {kw}
+              </span>
+            ))}
+          </div>
+
           <p className="text-[10px] text-stone-400/80 pt-2">© 2026 Al-Faraid Scholar. Licensed under Apache 2.0.</p>
         </div>
       </footer>
